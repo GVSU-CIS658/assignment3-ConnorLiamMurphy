@@ -1,12 +1,15 @@
 <template>
-  <div class="syrup"></div>
+  <div class="syrup":style="{ backgroundColor: currentSyrup.color}"></div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { currentSyrup } from '../stores/beverage';
+</script>
+
 <style lang="scss" scoped>
 .syrup {
   transform: translateY(400%);
-  background-color: #c6c6c6;
+  background-color: #c6c6c6c7;
   position: relative;
   width: 100%;
   height: 20%;
